@@ -14,8 +14,14 @@ PATH=$PATH:.vimpkg/bin apt-vim install -y https://github.com/scrooloose/nerdtree
 # Vundle #
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
+
+# install zsh
+sudo apt-get install zsh
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 # vimrc #
-git clone https://github.com/dayeol/vim rQ3RFv
+git clone https://github.com/Tinyik/vim rQ3RFv
 cp -R rQ3RFv/.vim ~/
 cp rQ3RFv/.vimrc ~/
 # oh-my-zsh theme #
@@ -41,14 +47,13 @@ git config --global alias.d difftool
 
 # git config #
 git config --global core.editor /usr/bin/vim
-git config --global user.name "Dayeol Lee"
-git config --global user.email "dayeol@berkeley.edu"
+git config --global user.name "Ian Fang"
+git config --global user.email "tinyik@berkeley.edu"
 
 # TMUX setting #
 git clone https://github.com/NHDaly/tmux-better-mouse-mode ~/tmux-better-mouse-mode
 echo "run-shell ~/tmux-better-mouse-mode/scroll_copy_mode.tmux" >> ~/.tmux.conf
 echo "set-option -g status-position top" >> ~/.tmux.conf
+
 # finish & reminder #
-echo "******** You're all set! IF.... ********"
-echo "* you set ZSH_THEME='dayeol' in .zshrc *"
-echo "****************************************"
+echo "******** You're all set! ********"
